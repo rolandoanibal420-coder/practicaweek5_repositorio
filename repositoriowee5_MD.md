@@ -1,4 +1,11 @@
-# tecla numeral sirve para titulo
+# Ojos Azules website practica 1
 
-## es como decir un H2 y mientras mas numerales agregue es como ir agregando H3,H4 ,etc..
-y debajo del titulo puedo agregar toda la info necesaria como si fueran parrafos
+## Requerimientos 
+El sistema debe informar al usuario acerca de la banlist de cartas de yugioh en sus diferentes formatos para informar que cartas estan baneadas.
+
+
+
+### requerimientos funcionales
+RF01: El sistema debe mostrar una tabla con los diferentes formatos y cartas
+RF02: El usuario deberia ser capaz de visualizar en que fecha (evento) estaran avisando la nueva lista de cartas baneadas
+RF03: La pagina debe mostrar un video con un decklist del formato GOAT 
