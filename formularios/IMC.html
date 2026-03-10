@@ -8,29 +8,31 @@
 </head>
 
 <body>
-        <h1> Calculadora</h1>
+    <h1> Calculadora</h1>
+    <fieldset>
+        <legend>IMC</legend>
+        <h2> Calculo del IMC</h2>
+        <form>
+            <div>
+                <label for="txtPeso">Peso: </label>
+                <input type="number" id="txtPeso">
+            </div>
 
-    <h2> Calculo del IMC</h2>
-    <form>
-        <div>
-            <label for="txtPeso">Peso: </label>
-            <input type="number" id="txtPeso">
-        </div>
+            <div>
+                <label for="txtEstatura"> Estatura: </label>
+                <input type="number" id="txtEstatura">
+            </div>
 
-        <div>
-            <label for="txtEstatura"> Estatura: </label>
-            <input type="number" id="txtEstatura">
-        </div>
-
-        <button id="btnCalcularIMC">Calcular IMC: </button>
-    </form>
+            <button id="btnCalcularIMC">Calcular IMC: </button>
+        </form>
 
         <section id="sctResultadoIMC">
             <h2>IMC:</h2>
             <p></p>
         </section>
+    </fieldset>
 
-            <h1> Calculo de la temperatura</h1>
+    <h1> Calculo de la temperatura</h1>
     <form>
         <div>
             <label for="txtTemp">temperatura en grados celsius o Farinheit : </label>
@@ -45,10 +47,10 @@
         <button id="btnCalcularTEMP">Calcular temperatura: </button>
     </form>
 
-        <section id="sctResultadoTEMP">
-            <h2>Temperatura:</h2>
-            <p></p>
-        </section>
+    <section id="sctResultadoTEMP">
+        <h2>Temperatura:</h2>
+        <p></p>
+    </section>
 
 
 
@@ -56,5 +58,6 @@
     <script src="js/IMC.js"> </script>
     <script src="js/tempt.js"> </script>
 
-        </body>
-</html >
+</body>
+
+</html>

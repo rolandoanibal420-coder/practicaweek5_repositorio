@@ -20,26 +20,20 @@ Datos de prueba:    Temperatura    Escala  a convertir     Resultado esperado
     function convertirTemperatura() {
         let temperatura = txtTemp.value;
         let conversión = txtConversion.value;
-
-        // 1. Lógica para Fahrenheit
         if (conversión === 'F' || conversión === 'f') {
             let resultado = (temperatura * 9 / 5) + 32;
             parrafoResultado.innerText = resultado;
         } 
 
-        // 2. Lógica para Celsius
         if (conversión === 'C' || conversión === 'c') {
             let resultado = (temperatura - 32) * 5 / 9;
             parrafoResultado.innerText = resultado;
         }
-
-        // 3. Manejo de error (Detección de letras o campos vacíos)
         if (temperatura === "" || (conversión !== 'C' && conversión !== 'F' && conversión !== 'c' && conversión !== 'f')) {
             parrafoResultado.innerText = "Error";
         }
     }
 
-    // El conector del botón
     btnCalcularTEMP.addEventListener("click", function(event) {
         event.preventDefault(); 
         convertirTemperatura(); 

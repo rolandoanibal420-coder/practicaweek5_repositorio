@@ -29,5 +29,17 @@ parrafoResultado.innerText = imc.toFixed(2);
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // escuchar eventos
 btnCalcularIMC.addEventListener("click", calcularIMCRetorno);
