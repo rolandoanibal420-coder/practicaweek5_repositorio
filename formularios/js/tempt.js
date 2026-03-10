@@ -11,23 +11,37 @@ Datos de prueba:    Temperatura    Escala  a convertir     Resultado esperado
                     "100"           C                         Error
                     0               a                          Error
 */
+{
+    let btnCalcularTEMP = document.getElementById("btnCalcularTEMP");
+    let txtTemp = document.getElementById("txtTemp");
+    let txtConversion = document.getElementById("txtConversion");
+    let parrafoResultado = document.querySelector("#sctResultadoTEMP p");
 
-function convertirTemperatura (temperatura, conversión) {
-      if (typeof temperatura !== 'number') {
-        return 'Error';
+    function convertirTemperatura() {
+        let temperatura = txtTemp.value;
+        let conversión = txtConversion.value;
 
-    }     
+        // 1. Lógica para Fahrenheit
+        if (conversión === 'F' || conversión === 'f') {
+            let resultado = (temperatura * 9 / 5) + 32;
+            parrafoResultado.innerText = resultado;
+        } 
 
-    if (conversión === 'F' || conversión === 'f'){
-        return ( temperatura * 9 / 5) + 32;
+        // 2. Lógica para Celsius
+        if (conversión === 'C' || conversión === 'c') {
+            let resultado = (temperatura - 32) * 5 / 9;
+            parrafoResultado.innerText = resultado;
+        }
+
+        // 3. Manejo de error (Detección de letras o campos vacíos)
+        if (temperatura === "" || (conversión !== 'C' && conversión !== 'F' && conversión !== 'c' && conversión !== 'f')) {
+            parrafoResultado.innerText = "Error";
+        }
     }
 
-    if (conversión === 'C' || conversión === 'c') {
-        return (temperatura - 32) * 5 / 9;
-    }
-    
-    return 'Error';
-    }
-
-        console.log("conversion 1 (25 grados celcius a F):", convertirTemperatura(25,'F'));
-        console.log("conversion 2 (32 grados F  a celcius):", convertirTemperatura(32,'C'));
+    // El conector del botón
+    btnCalcularTEMP.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        convertirTemperatura(); 
+    });
+}

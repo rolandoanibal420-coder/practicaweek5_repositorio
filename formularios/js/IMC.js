@@ -1,5 +1,10 @@
 let btnCalcularIMC = document.getElementById("btnCalcularIMC");
 
+let txtPeso = document.getElementById("txtPeso");
+let txtEstatura = document.getElementById("txtEstatura");
+
+
+let parrafoResultado = document.querySelector("#sctResultadoIMC p");
 
 function calcularIMC(peso, estatura){
     //               (estatura*estatura)
@@ -12,11 +17,14 @@ calcularIMC(60, 1.8);
 
 // Función con datos de salida (valor de retorno)
 function calcularIMCRetorno(){
-    console.log(" evento de clic");
+    let peso = txtPeso.value;
+    let estatura = txtEstatura.value;
+
+
     //               (estatura*estatura)
-   /* let imc = peso / Math.pow(estatura, 2);
-    return imc.toFixed(2);
-    */
+    let imc = peso / Math.pow(estatura, 2);
+parrafoResultado.innerText = imc.toFixed(2);
+    
 
 }
 
