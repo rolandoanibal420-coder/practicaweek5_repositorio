@@ -25,9 +25,34 @@ function calcularIMCRetorno(){
     let imc = peso / Math.pow(estatura, 2);
 parrafoResultado.innerText = imc.toFixed(2);
     
+if (validarCamposVacios() === false){
+    parrafoResultado.innerText = imc.toFixed(2);
+}
+else{
+    parrafoResultado.innerText = "no se puede calcular el IMC";
+}
 
 }
 
+
+function validarCamposVacios() {
+    let error = false; //asumir que no existen errores por defecto
+    if (txtPeso.value === ""){
+        txtPeso.classList.add("input-error");
+        error = true;
+    }
+    else{
+        txtEstatura.classList.remove("input-error");
+    }
+        if (txtEstatura.value === ""){
+        txtEstatura.classList.add("input-error");
+        error = true;
+    }
+    else{
+        txtEstatura.classList.remove("input-error")
+    }
+    return error;
+}
 
 
 
