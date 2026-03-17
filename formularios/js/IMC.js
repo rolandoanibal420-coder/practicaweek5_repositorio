@@ -29,7 +29,12 @@ if (validarCamposVacios() === false){
     parrafoResultado.innerText = imc.toFixed(2);
 }
 else{
-    parrafoResultado.innerText = "no se puede calcular el IMC";
+    Swal.fire({
+        title: "no se puede calcular el IMC",
+        text: "porfavor revise los campos resltados",
+        icon: "warning",
+        confirmButtonText: "aceptar"
+    });
 }
 
 }

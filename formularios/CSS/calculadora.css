@@ -1,5 +1,26 @@
-
+:root{
+    --azul: #164a98;
+    --rojo: #d2232a;
+    --border-radio: 5px;
+    --tamanio-fuente: 16px;
+    --fuente: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 .input-error{
-    border:  2px solid rgb(218, 44,44);
+    border:  2px solid var(--rojo);
+}
+
+body{
+    font-family: var(--fuente);
+}
+
+label{
+    color: var(--azul);
+    font-size: var(var(--tamanio-fuente));
+}
+
+.contenedor-input-etiqueta{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
 }
